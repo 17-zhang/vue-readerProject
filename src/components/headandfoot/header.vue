@@ -13,7 +13,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-
   export default {
     data() {
       return {
@@ -63,7 +62,7 @@
       },
 
       center: {
-        type: Boolean
+        type: Boolean,
         default: false
       },
 
@@ -75,12 +74,9 @@
       go:{
         default:-1
       }
-
     }
-
   }
 </script>
 
 <style scoped>
-
 </style>

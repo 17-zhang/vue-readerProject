@@ -1,15 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import me from '../components/me'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
+  mode: 'history',// 去掉路由地址的#
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'me',
+      component: resolve => require(['@/components/me'], resolve),
+      meta: {
+        keepAlive: false
+      }
     }
   ]
 })

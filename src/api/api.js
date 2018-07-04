@@ -38,53 +38,53 @@ export function getBookInfo(id) {
 export function getAuthorBook(author) {
   let author_query = qs.stringify(author);
   return fetch({
-    url:'/api/author--books?'+author_query,
+    url: '/api/author--books?' + author_query,
   })
 }
 
 
 //获取书籍源
-export function getBookSources(bookid){
+export function getBookSources(bookid) {
   let book_source = qs.stringify(bookid);
   return fetch({
-    url: '/api/atoc?'+book_source,
+    url: '/api/atoc?' + book_source,
   })
 }
 
 //获取书籍章节
-export function  getChapter(id){
+export function getChapter(id) {
   return fetch({
-    url: '/api/atoc/'+id+'?view=chapters',
+    url: '/api/atoc/' + id + '?view=chapters',
   })
 }
 
 //获取章节详细内容
-export function getBookChapter(link){
+export function getBookChapter(link) {
   return fetch({
-    url:'/content/chapter/'+link,
+    url: '/content/chapter/' + link,
     // url:'http://chapterup.zhuishushenqi.com/chapter/'+link,
   })
 }
 
 //获取搜索结果
-export function getSearchResult(word){
+export function getSearchResult(word) {
   let query = qs.stringify(word);
   return fetch({
-    url:'/api/book/fuzzy-search?'+query,
+    url: '/api/book/fuzzy-search?' + query,
   })
 }
 
-//获取热搜词
-export function getSearchHotwords(){
+// 获取热搜词
+export function getSearchHotwords() {
   return fetch({
     url: '/api/book/search-hotwords',
   })
 }
 
 //获取排名详情
-export function getRank(categoryid){
+export function getRank(categoryid) {
   return fetch({
-    url:'/api/ranking/'+categoryid,
+    url: '/api/ranking/' + categoryid,
 
   })
 }

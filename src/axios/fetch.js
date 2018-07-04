@@ -1,8 +1,6 @@
 import axios from 'axios'
 
-
 const ENV = progress.env.NODE_ENV
-
 
 //创建axios实例
 const service = axios.create({
@@ -10,7 +8,6 @@ const service = axios.create({
   timeout: 10000,
   method: 'get'
 })
-
 
 //request 请求收到后 拦截器设置
 service.interceptors.response.use(response => {
@@ -35,6 +32,4 @@ service.interceptors.response.use(response => {
     Message.error(ENV === 'development' ? error.message : '请求错误！')
     return Promise.reject(error.response.data)  //返回接口返回的错误信息
   })
-
-
 export default service
