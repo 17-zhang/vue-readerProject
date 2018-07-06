@@ -1,6 +1,7 @@
 # vue-reader
 
 > A Vue.js project
+> 技术栈：vue2.0+webpack+es6+vuex+mintUI+museUI+axios
 
 ## Build Setup
 
